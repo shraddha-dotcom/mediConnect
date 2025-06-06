@@ -10,7 +10,7 @@ import { BiArrowToRight } from 'react-icons/bi';
 import About from "../components/About"
 import ServiceList from '../components/Services/ServiceList';
 import DoctorList from './Doctors/DoctorList';
-import FaqList from "../components/Faq/faqList";
+import FaqList from "../components/Faq/FaqList";
 
 
 const Dashboard = () => {
