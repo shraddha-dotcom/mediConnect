@@ -125,31 +125,31 @@ Frontend: http://localhost:5173
 Backend: http://localhost:5000/api
     
 ## Folder Structure
-mediConnect/
-│
-├── client/                 # React frontend
-│   ├── public/             # Static files
-│   └── src/
-│       ├── assets/         # Images and icons
-│       ├── components/     # Reusable components (Header, Footer, etc.)
-│       ├── pages/          # Page components (Login, Signup, Dashboard, etc.)
-│       ├── routes/         # React Router route definitions
-│       ├── utils/          # Utility functions (e.g. time slot generator)
-│       └── App.jsx         # Main app component
-│
-├── server/                 # Express backend
-│   ├── config/             # Database and config files
-│   ├── controllers/        # Route handler logic
-│   ├── middleware/         # Auth middleware, error handling
-│   ├── models/             # Mongoose schemas (User, Doctor, Booking, Review)
-│   ├── routes/             # Express route files
-│   ├── swagger/            # Swagger API documentation setup
-│   ├── .env                # Environment variables
-│   └── server.js           # Entry point
-│
-├── README.md               # Project overview and documentation
-├── .gitignore              # Files to ignore in git
-└── package.json            # Project metadata and scripts
+  mediConnect/
+  │
+  ├── client/                 # React frontend
+  │   ├── public/             # Static files
+  │   └── src/
+  │       ├── assets/         # Images and icons
+  │       ├── components/     # Reusable components (Header, Footer, etc.)
+  │       ├── pages/          # Page components (Login, Signup, Dashboard, etc.)
+  │       ├── routes/         # React Router route definitions
+  │       ├── utils/          # Utility functions (e.g. time slot generator)
+  │       └── App.jsx         # Main app component
+  │
+  ├── server/                 # Express backend
+  │   ├── config/             # Database and config files
+  │   ├── controllers/        # Route handler logic
+  │   ├── middleware/         # Auth middleware, error handling
+  │   ├── models/             # Mongoose schemas (User, Doctor, Booking, Review)
+  │   ├── routes/             # Express route files
+  │   ├── swagger/            # Swagger API documentation setup
+  │   ├── .env                # Environment variables
+  │   └── server.js           # Entry point
+  │
+  ├── README.md               # Project overview and documentation
+  ├── .gitignore              # Files to ignore in git
+  └── package.json            # Project metadata and scripts
 
 ## API Reference
 
@@ -189,11 +189,6 @@ mediConnect/
 | POST | /reviews| Submit a doctor review|
 
 
-
-
-
-
-
 ## API Documentation (Swagger)
 MediConnect uses Swagger (OpenAPI 3.0) to document and test the API.
 
@@ -218,8 +213,6 @@ Once the backend is running, visit:
 ```bash
  (http://localhost:5000/api-docs/)
 ```
-
-
 
 
 ## Deployment (Netlify + Backend Hosting)
@@ -270,9 +263,6 @@ Add Environment Variables:
      PORT=5000
      MONGO_URI=your-mongodb-url
      JWT_SECRET=your-secret
-
-
-
 
 ## Running Tests (Vitest)
 
