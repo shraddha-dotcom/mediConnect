@@ -1,5 +1,4 @@
-
-import "./app.css";
+import "./App.css";
 import { BrowserRouter as Router, useLocation } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
 import Header from './components/Header';
