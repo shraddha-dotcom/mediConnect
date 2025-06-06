@@ -125,6 +125,7 @@ Frontend: http://localhost:5173
 Backend: http://localhost:5000/api
     
 ## Folder Structure
+```bash
   mediConnect/
   │
   ├── client/                 # React frontend
@@ -150,7 +151,7 @@ Backend: http://localhost:5000/api
   ├── README.md               # Project overview and documentation
   ├── .gitignore              # Files to ignore in git
   └── package.json            # Project metadata and scripts
-
+```
 ## API Reference
 
 #### Auth Routes
