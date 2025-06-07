@@ -188,19 +188,3 @@ export default DoctorDashboard
 
 
 
-// const DoctorDashboard = () => {
-
-//     const dispatch = useDispatch();
-//     const { loading, doctor, error } = useSelector((state) => state.doctorProfile);
-
-//     useEffect(() => {
-//         dispatch(fetchDoctorProfile());
-//     }, [dispatch]);
-
-//     const [tab, setTab] = useState('overview')
-//     return (
-//
-//     )
-// }
-
-

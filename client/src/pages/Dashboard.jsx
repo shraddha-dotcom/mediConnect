@@ -16,11 +16,11 @@ import { useContext } from "react";
 
 
 const Dashboard = () => {
-    const { dispatch } = useContext(AuthContext)
+    const { token } = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleRequestClick = () => {
-        if (!dispatch) {
+        if (!token) {
             toast.error("Please login first");
             navigate("/login");
         } else {
