@@ -38,7 +38,7 @@ const Header = () => {
     return (
         <header
             ref={headerRef}
-            className="fixed top-0 left-0 z-[9999] w-full bg-white shadow-md transition-all duration-300 ease-in-out"
+            className="header fixed top-0 left-0 z-[50] w-full bg-white shadow-md transition-all duration-300 ease-in-out"
         >
             <div className="container mx-auto px-4 py-3">
                 <div className="flex items-center justify-between">
