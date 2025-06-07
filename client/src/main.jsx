@@ -15,8 +15,13 @@ createRoot(document.getElementById('root')).render(
       <ToastContainer
         theme='dark'
         position='top-right'
+        hideProgressBar={false}
+        newestOnTop={false}
         autoClose={3000}
         closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
         pauseOnHover={false} />
       <App />
 

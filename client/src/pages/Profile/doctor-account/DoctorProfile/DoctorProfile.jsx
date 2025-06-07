@@ -23,8 +23,6 @@ const DoctorProfile = ({ doctorData }) => {
         timeSlots: [],
         photo: null,
     });
-    // console.log("Submitting formData:", formData);
-
 
     useEffect(() => {
         if (doctorData) {
@@ -43,9 +41,6 @@ const DoctorProfile = ({ doctorData }) => {
                 photo: doctorData.photo || ''
             });
         }
-
-
-        // console.log("doctor updated", doctorData)
     }, [doctorData]);
 
     const [isLoading, setLoading] = useState(false)
@@ -86,14 +81,12 @@ const DoctorProfile = ({ doctorData }) => {
                 },
                 body: JSON.stringify(formData)
             })
-
-
             const result = await res.json()
 
             if (!res.ok) {
-                throw new Error(result.message)
+                throw new Error(result.message || "Failed to update profile.")
             }
-            toast.success(result.message)
+            toast.success(result.message || "Profile updated successfully!")
         } catch (err) {
             toast.error(err.message)
 
@@ -102,8 +95,6 @@ const DoctorProfile = ({ doctorData }) => {
         }
 
     }
-
-
 
     // reusable function for adding item
     const addItem = (key, item) => {
