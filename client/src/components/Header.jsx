@@ -41,7 +41,7 @@ const Header = () => {
             className="header fixed top-0 left-0 z-[50] w-full bg-white shadow-md transition-all duration-300 ease-in-out"
         >
             <div className="container mx-auto px-4 py-3">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between bg-transparent mix-blend-multiply">
                     {/* Logo */}
                     <Link to="/dashboard">
                         <img
