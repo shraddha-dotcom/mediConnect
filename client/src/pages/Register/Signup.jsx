@@ -33,10 +33,12 @@ const Signup = () => {
         try {
             setLoading(true); // Start loader
 
-            const imageUrl = await uploadImageToCloudinary(file);
+            const data = await uploadImageToCloudinary(file);
 
-            setPreviewUrl(imageUrl);
-            setFormData({ ...formData, photo: imageUrl });
+            setPreviewUrl(data.secure_url);
+            setFormData({ ...formData, photo: data.secure_url });
+            console.log("Image URL:", data);
+
         } catch (error) {
             toast.error("Image upload failed");
             console.error(error);

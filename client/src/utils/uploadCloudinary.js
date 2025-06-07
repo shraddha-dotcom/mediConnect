@@ -23,7 +23,7 @@ const cloud_name = import.meta.env.VITE_CLOUD_NAME;
       throw new Error(result?.error?.message || "Image upload failed");
     }
 
-    return result.secure_url;
+    return result;
 
   } catch (error) {
     console.error("Cloudinary upload error:", error);
