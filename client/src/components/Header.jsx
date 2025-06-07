@@ -2,7 +2,6 @@ import { NavLink, Link } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
 import { BiMenu } from "react-icons/bi"
 import logo from "../assets/medilogo.jpg";
-
 import { AuthContext } from '../context/AuthContext';
 
 const navLinks = [
