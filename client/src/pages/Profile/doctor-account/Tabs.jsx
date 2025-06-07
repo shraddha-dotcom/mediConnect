@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { AuthContext } from '../../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
-import { BiMenu } from 'react-icons/bi'
+
 
 const Tabs = ({ tab, setTab }) => {
 
@@ -14,10 +14,7 @@ const Tabs = ({ tab, setTab }) => {
     }
     return (
         <div>
-            <span className='lg:hidden'>
-                <BiMenu className='w-6 h-6 cursor-pointer' />
-            </span>
-            <div className='hidden lg:flex flex-col p-[30px] bg-white shadow-panelShadow items-center h-max rounded-md'>
+            <div className=' lg:flex flex-col p-[30px] bg-white shadow-panelShadow items-center h-max rounded-md'>
                 <button
                     onClick={() => setTab('overview')}
                     className={`${tab === 'overview'
