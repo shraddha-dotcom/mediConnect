@@ -8,8 +8,6 @@ import { HashLoader } from "react-spinners"
 
 
 const Signup = () => {
-
-
     const [previewUrl, setPreviewUrl] = useState("")
     const [loading, setLoading] = useState(false);
 
@@ -31,12 +29,21 @@ const Signup = () => {
     const handleFileInputChange = async (event) => {
         const file = event.target.files[0];
         // console.log(file)
+        if (!file) return;
+        try {
+            setLoading(true); // Start loader
 
-        const data = await uploadImageToCloudinary(file);
+            const data = await uploadImageToCloudinary(file);
 
-        setPreviewUrl(data.url);
-        setFormData({ ...formData, photo: data.url });
-    }
+            setPreviewUrl(data.url);
+            setFormData({ ...formData, photo: data.url });
+        } catch (error) {
+            toast.error("Image upload failed");
+            console.error(error);
+        } finally {
+            setLoading(false); // End loader
+        }
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -210,7 +217,7 @@ const Signup = () => {
                                         className="absolute top-0 left-0 w-full h-full
                                     flex items-center px-[0.75rem] py-[0.37rem] text-[15px] leading-6 overflow-hidden bg-[#0066ff46]
                                     text-headingColor font-semibold rounded-lg truncate cursor-pointer">
-                                        Upload Photo
+                                        {loading ? <HashLoader size={25} color="#ffffff" /> : " Upload Photo"}
                                     </label>
                                 </div>
                             </div>
