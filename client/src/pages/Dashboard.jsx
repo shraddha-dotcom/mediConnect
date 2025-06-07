@@ -17,10 +17,12 @@ import { useContext } from "react";
 
 const Dashboard = () => {
     const { token } = useContext(AuthContext)
+
     const navigate = useNavigate();
 
     const handleRequestClick = () => {
-        if (!token) {
+        console.log("TOKEN in Dashboard:", token);
+        if (!token || token === 'null') {
             toast.error("Please login first");
             navigate("/login");
         } else {

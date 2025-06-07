@@ -3,14 +3,13 @@ import DoctorCard from './DoctorCard';
 import useFetchData from "../../hooks/useFetchData";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
-import { useEffect } from "react";
 
 const DoctorList = () => {
 
     const { loading, data: doctors, error } = useFetchData(`${BASE_URL}/doctors`)
-    useEffect(() => {
-        console.log("Doctor fetched", doctors)
-    })
+    // useEffect(() => {
+    //     console.log("Doctor fetched", doctors)
+    // })
     return (
         <>
             {loading && <Loading />}

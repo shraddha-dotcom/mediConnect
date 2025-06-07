@@ -14,7 +14,7 @@ import Appointments from "./Appointments";
 
 const DoctorDashboard = () => {
     const { data, loading, error } = useGetProfile(`${BASE_URL}/doctors/profile/me`)
-    console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
+    // console.log("BASE_URL:", import.meta.env.VITE_BASE_URL);
 
     const [tab, setTab] = useState('overview')
 

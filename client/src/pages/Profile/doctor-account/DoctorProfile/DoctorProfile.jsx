@@ -45,7 +45,7 @@ const DoctorProfile = ({ doctorData }) => {
         }
 
 
-        console.log("doctor updated", doctorData)
+        // console.log("doctor updated", doctorData)
     }, [doctorData]);
 
     const [isLoading, setLoading] = useState(false)
