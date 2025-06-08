@@ -89,7 +89,7 @@ const Header = () => {
                             <Link to="/login">
                                 <button
                                     data-testid="login-button"
-                                    className="bg-primaryColor text-white font-semibold px-5 py-2 rounded-full hover:opacity-90 transition"
+                                    className="bg-primaryColor text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition"
                                 >
                                     Login
                                 </button>
